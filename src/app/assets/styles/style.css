@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'zex';
+  src:  url('fonts/zex.eot?5bfayv');
+  src:  url('fonts/zex.eot?5bfayv#iefix') format('embedded-opentype'),
+    url('fonts/zex.ttf?5bfayv') format('truetype'),
+    url('fonts/zex.woff?5bfayv') format('woff'),
+    url('fonts/zex.svg?5bfayv#zex') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'zex' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-face-success:before {
+  content: "\e9eb";
+}
+.icon-face-primary:before {
+  content: "\e9f9";
+}
+.icon-face-warning:before {
+  content: "\e9fb";
+}
+.icon-face-error:before {
+  content: "\e9ff";
+}

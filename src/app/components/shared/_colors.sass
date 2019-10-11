@@ -1,0 +1,31 @@
+$white: #FAFAFA
+$light-gray: #78909C
+$devil-gray: #455A64
+$dark-gray: #263238
+
+$accent: #01579B
+$accent-variant: #B3E5FC
+
+$success: #1B5E20
+$success-variant: #C8E6C9
+$error: #b71c1c
+$error-variant: #ffcdd2
+$warning: #F57F17
+$warning-variant: #FFF9C4
+
+$buttonColors: ()
+$buttonColors: map-merge($buttonColors, (primary: $accent))
+$buttonColors: map-merge($buttonColors, (success: $success))
+$buttonColors: map-merge($buttonColors, (warning: $warning))
+$buttonColors: map-merge($buttonColors, (error: $error))
+
+=color($type)
+  background-color: map-get($buttonColors, $type)
+  color: $white
+  &:hover
+    background-color: darken(map-get($buttonColors, $type), 5%)
+
+=colors
+  @each $type in primary success warning error
+    &.#{$type}
+      +color($type)
