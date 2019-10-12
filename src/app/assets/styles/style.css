@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'zex';
-  src:  url('fonts/zex.eot?5bfayv');
-  src:  url('fonts/zex.eot?5bfayv#iefix') format('embedded-opentype'),
-    url('fonts/zex.ttf?5bfayv') format('truetype'),
-    url('fonts/zex.woff?5bfayv') format('woff'),
-    url('fonts/zex.svg?5bfayv#zex') format('svg');
+  src:  url('fonts/zex.eot?wtn968');
+  src:  url('fonts/zex.eot?wtn968#iefix') format('embedded-opentype'),
+    url('fonts/zex.ttf?wtn968') format('truetype'),
+    url('fonts/zex.woff?wtn968') format('woff'),
+    url('fonts/zex.svg?wtn968#zex') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-send:before {
+  content: "\e949";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
 .icon-face-success:before {
   content: "\e9eb";
 }
@@ -36,4 +45,7 @@ i {
 }
 .icon-face-error:before {
   content: "\e9ff";
+}
+.icon-trash:before {
+  content: "\e9ac";
 }

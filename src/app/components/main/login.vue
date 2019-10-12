@@ -8,9 +8,9 @@
   align-items: center
   .floatingLogin
     border-radius: 2px
-    width: 550px
-    background-color: $white
-    padding: 50px
+    width: 300px
+    background-color: $dark-gray
+    padding: 30px 0
     box-shadow: 0px 0px 5px 0px $dark-gray
   .loginBtn
     display: flex
@@ -18,7 +18,7 @@
   .title
     margin: 0
     padding: 0
-    color: $devil-gray
+    color: $white
     font-weight: 400
   .subtitle, .title
     text-align: center
@@ -32,26 +32,21 @@
 <template lang="pug">
 .login
   .floatingLogin
-    h1.title Bienvenido
+    h1.title Bienvenido a Zex
     template(v-if="display==='login'")
       .subtitle Te estábamos esperando
     .loginBtn: #login
 </template>
 
 <script>
-import { login as userLogin, signup as userSignup } from 'Utils/auth'
+import { login as userLogin } from 'Utils/auth'
 import btn from '~/shared/btn.vue'
 import textField from '~/shared/textField.vue'
 export default {
   data: () => ({
     display: 'login',
+    coolDown: 0
   }),
-  methods: {
-    login () {
-      userLogin({email: this.email, password: this.password}, true)
-      this.$router.push('/dashboard')
-    }
-  },
   mounted () {
     ResuelveLogin({
       element: '#login',
@@ -63,7 +58,29 @@ export default {
       buttons: ['google'],
       returnUrl: '',
     }, (error, token) => {
-      console.log({error, token})
+      if(this.coolDown > 0) return
+      if(!error && !token) return
+      if(error === 'Successfully authenticated.') return
+      this.coolDown = 100
+      setTimeout(() => { this.coolDown = 0 }, 100)
+      if (token) {
+        const userData = userLogin(token, true)
+        this.$store.commit('setUser', userData)
+        this.$router.push('/dashboard')
+        this.$store.commit('addToast', {
+          type: 'success',
+          title: 'Bienvenido a Zex',
+          text: 'ya era hora',
+          key: Math.round(Math.random() * 1000)
+        })
+        return
+      }
+      this.$store.commit('addToast', {
+        type: 'error',
+        title: 'Error de autenticación',
+        text: error,
+        key: Math.round(Math.random() * 1000)
+      })
     })
   }
 }

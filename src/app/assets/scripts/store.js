@@ -5,11 +5,18 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    username: null
+    userData: null,
+    toasts: []
   },
   mutations: {
     setUser (s, input) {
-      s.username = input
+      s.userData = input
+    },
+    addToast (s, toast) {
+      s.toasts.push(toast)
+    },
+    delToast(s, key) {
+      s.toasts = s.toasts.filter(m => m.key != key)
     }
   }
 })

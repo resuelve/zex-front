@@ -1,11 +1,19 @@
 import login from './login.vue'
 import dashboard from './dashboard.vue'
-import { requireAuth, logout } from 'Utils/auth'
+import { requireAuth, logout, isLoggedIn } from 'Utils/auth'
 
 export const routes = [
   {
     path: '/login',
     component: login,
+    beforeEnter: (_to, _from, next) => {
+      if (isLoggedIn()) {
+        next({
+          path: '/'
+        })
+      }
+      return next()
+    },
     meta: {
       title: 'Zex: Login'
     }

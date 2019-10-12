@@ -9,6 +9,7 @@
   margin-bottom: 10px
   box-shadow: 0px 0px 5px 0px $dark-gray
   flex-wrap: wrap
+  position: relative
   +colors
   @each $type in primary success warning error
     &.#{$type} .icon i.#{$type}
@@ -17,7 +18,6 @@
   font-size: 30px
   min-height: 50px
   min-width: 50px
-  text-align: center
   display: flex
   justify-content: center
   align-items: center
@@ -31,6 +31,18 @@
     transition: width 100ms linear
 .title
   font-weight: 700
+.closebtn
+  position: absolute
+  color: $white
+  top: 2px
+  right: 2px
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
 </style>
 
 <script>
@@ -41,9 +53,8 @@ export default {
   }),
   methods: {
     trySelfDestruct () {
-      if (this.timeout <= 0) {
-        this.$destroy()
-        this.$el.parentNode.removeChild(this.$el)
+      if (this.timeout < 0) {
+        this.$emit('destroy', this.itemkey)
         return
       }
       this.timer = setTimeout(() => {
@@ -65,6 +76,10 @@ export default {
   },
   mounted () {
     this.trySelfDestruct()
+  },
+  props: {
+    title: { default: '' },
+    itemkey: { default: '' }
   }
 }
 </script>
@@ -75,7 +90,8 @@ export default {
     for type in ['primary', 'success', 'warning', 'error']
       i(class=`${type} icon-face-${type}`)
   .desc
-    .title Title
-    .text Descripción del item en el toast
+    .title {{title}}
+    .text: slot
   .bar: .fill(:style="'width:' + filling + '%'")
+  .closebtn: i.icon-trash(@click="$emit('destroy', itemkey)")
 </template>
