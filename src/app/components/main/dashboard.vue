@@ -12,14 +12,17 @@
     sidebar
     .content
       appheader
+      ticketList
 </template>
 <script>
 import sidebar from '~/main/sidebar.vue'
 import appheader from '~/main/header.vue'
+import ticketList from '~/main/ticketList.vue'
 export default {
   components: {
     sidebar,
-    appheader
+    appheader,
+    ticketList
   }
 }
 </script>

@@ -19,9 +19,10 @@
 <template lang="pug">
   .appHeader
     .sectionTitle
-      |Míos &nbsp;
+      //- |Míos &nbsp;
       //- .selected (3) seleccionados
-    searchInput
+    .searchInput
+    //- searchInput
     usermenu
 </template>
 <script>

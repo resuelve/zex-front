@@ -1,7 +1,7 @@
 <style lang="sass" scoped>
 @import '~/shared/_colors.sass'
 .login
-  background: $dark-gray url(https://tctechcrunch2011.files.wordpress.com/2017/11/gettyimages-174926429.jpg) no-repeat center
+  background: $dark-gray url(/media/login-bg.jpg) no-repeat center
   background-size: cover
   display: flex
   justify-content: center
