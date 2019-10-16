@@ -1,22 +1,12 @@
-VUE SPA STARTER
+Zex - Frontend
 ===============
 
-Vue spa starer is a set of tools to help you start a new SPA using:
+ZEnd DesX (Zex para los amigos) es un ticket system pensado para uso interno.
+Free y open source. MIT lic.
 
- - Vue
- - Vuex
- - Vue-router
- - Vue Single File Components
- - Sass in Vue files
- - Pug in Vue files
- - ES10 in Vue files
- - BrowserSync (for develop)
- - Webpack
 
-### Optional Stuff
-This repo uses a Makefile and byobu to help you have an easier developer vision of the repo. You can install byobu with homebrew, Makefile support is built in with apple developer tools.
+Lo que sigue en adelante, son cosas de desarrollo.
 
-### Usage
 **Initial setup**  
 Just type `make bootstrap` to install al npm dependencies.  
 Make sure you create a `.env` in root file with all your environmental variables. Minimal setup required is:
