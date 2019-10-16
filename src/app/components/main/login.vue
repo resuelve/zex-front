@@ -40,8 +40,6 @@
 
 <script>
 import { login as userLogin } from 'Utils/auth'
-import btn from '~/shared/btn.vue'
-import textField from '~/shared/textField.vue'
 export default {
   data: () => ({
     display: 'login',
