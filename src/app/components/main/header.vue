@@ -5,6 +5,7 @@
   justify-content: space-between
   align-items: center
   padding: 6px
+  margin-bottom: 30px
 .sectionTitle
   flex-grow: 1
   font-size: 20px
@@ -23,14 +24,14 @@
       //- .selected (3) seleccionados
     .searchInput
     //- searchInput
-    usermenu
+    userMenu
 </template>
 <script>
-import usermenu from '~/main/usermenu.vue'
+import userMenu from '~/main/userMenu.vue'
 import searchInput from '~/shared/searchInput.vue'
 export default {
   components: {
-    usermenu,
+    userMenu,
     searchInput
   }
 }

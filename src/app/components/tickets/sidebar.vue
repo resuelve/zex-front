@@ -42,12 +42,13 @@ li
 .middle
   flex-grow: 1
 .autoTags
-  height: calc(100vh - 300px)
+  height: calc(100vh - 251px)
   overflow: auto
 </style>
 <template lang="pug">
   .sideBar
-    .sideBarTitle Zex
+    .sideBarTitle
+      router-link(to="/") Zex
     ul.sideBarNav
       li
         .section

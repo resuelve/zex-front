@@ -71,8 +71,8 @@
     .name {{userData.nickname}}
   .title
     .comments +9
-    .name.
-      Hipster ipsum asimet ultraform organic coffe herbal tea
+    .name: router-link(to="/tickets/abc-123")
+      |Hipster ipsum asimet ultraform organic coffe herbal tea
   .timeStamp 09:41 AM
   .menu
     .icon: i.icon-dots
