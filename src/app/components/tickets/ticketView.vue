@@ -1,6 +1,6 @@
 <style lang="sass" scoped>
 @import '~/shared/_colors.sass'
-.tickets
+.ticket
   display: flex
   .content
     flex-grow: 1
@@ -9,7 +9,7 @@
 </style>
 
 <template lang="pug">
-.tickets
+.ticket
   sidebar
   .content
     appHeader
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import sidebar from '~/tickets/sidebar.vue'
+import sidebar from '~/tickets/ticketBar.vue'
 import appHeader from '~/main/header.vue'
 export default {
   data: () => ({}),

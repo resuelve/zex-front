@@ -46,13 +46,14 @@ export default {
     coolDown: 0
   }),
   mounted () {
+    console.log(LOGIN_URL, 'LOGIN_URL')
     ResuelveLogin({
       element: '#login',
       area: 'engineering',
       width: 230,
       height: 42,
       columns: 1,
-      domain: 'https://login.sandbox.resuelve.io/',
+      domain: LOGIN_URL,
       buttons: ['google'],
       returnUrl: '',
     }, (error, token) => {

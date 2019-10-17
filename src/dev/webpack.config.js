@@ -68,7 +68,8 @@ export default {
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       /** ADD HERE RUNTIME ENV VARIABLES */
-      ENV: JSON.stringify(config.ENV)
+      ENV: JSON.stringify(config.ENV),
+      LOGIN_URL: JSON.stringify(config.LOGIN_URL)
       /** END OF RUNTIME ENV VARIABLES */
     })
   ]
