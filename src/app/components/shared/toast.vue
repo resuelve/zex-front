@@ -2,12 +2,12 @@
 @import '~/shared/_colors.sass'
 .toast
   width: 300px
-  background-color: #ccc
   border-radius: 3px
   display: flex
   padding: 4px
   margin-bottom: 10px
-  box-shadow: 0px 0px 5px 0px $dark-gray
+  border-radius: 6px
+  box-shadow: 0px 0px 5px 0px var(--dark-gray)
   flex-wrap: wrap
   position: relative
   +colors
@@ -27,13 +27,15 @@
   flex: 0 0 100%
   .fill
     height: 5px
-    background-color: rgba($white, .5)
+    background-color: var(--white)
+    opacity: 0.5
+    border-radius: 6px
     transition: width 100ms linear
 .title
   font-weight: 700
 .closebtn
   position: absolute
-  color: $white
+  color: var(--white)
   top: 2px
   right: 2px
   width: 20px

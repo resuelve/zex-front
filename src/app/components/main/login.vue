@@ -1,7 +1,5 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .login
-  background: $dark-gray url(/media/login-bg.jpg) no-repeat center
   background-size: cover
   display: flex
   justify-content: center
@@ -9,16 +7,17 @@
   .floatingLogin
     border-radius: 2px
     width: 300px
-    background-color: $dark-gray
+    background: transparent linear-gradient(135deg, rgba(#ffffff, 0.1) 0%, rgba(#ffffff, 0.05) 100%)
     padding: 30px 0
-    box-shadow: 0px 0px 5px 0px $dark-gray
+    border-radius: 6px
+    box-shadow: 5px 5px 10px -5px var(--pinot-noir)
   .loginBtn
     display: flex
     justify-content: center
   .title
     margin: 0
     padding: 0
-    color: $white
+    color: var(--white)
     font-weight: 400
   .subtitle, .title
     text-align: center
@@ -26,7 +25,7 @@
     font-size: 1.2rem
     margin: 10px 0
     display: block
-    color: $light-gray
+    color: var(--light-gray)
 </style>
 
 <template lang="pug">
@@ -52,7 +51,7 @@ export default {
       width: 230,
       height: 42,
       columns: 1,
-      domain: 'https://login.sandbox.resuelve.io/',
+      domain: LOGIN_URL,
       buttons: ['google'],
       returnUrl: '',
     }, (error, token) => {

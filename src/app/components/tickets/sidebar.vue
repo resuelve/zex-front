@@ -1,18 +1,17 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .sideBar
-  width: 300px
-  background-color: $white
-  box-shadow: 0px 0px 5px 5px darken($titanium, 1%)
-  padding: 20px 40px
-  color: $lighter-gray
+  width: 220px
+  background: transparent linear-gradient(135deg, rgba(#ffffff, 0.1) 0%, rgba(#ffffff, 0.05) 100%)
+  box-shadow: 5px 5px 10px -5px var(--pinot-noir)
+  padding: 10px 20px
+  color: var(--white)
   display: flex
   flex-direction: column
 .sideBarTitle
   font-size: 30px
   font-weight: 700
   margin-bottom: 30px
-  color: $accent
+  color: var(--titanium)
 .icon
   width: 40px
   font-size: 20px
@@ -21,7 +20,7 @@
   align-items: center
 li
   text-transform: uppercase
-  font-size: 13px
+  font-size: 12px
 .section
   font-weight: 700
   font-size: 16px
@@ -33,7 +32,7 @@ li
   margin-bottom: 10px
   li
     height: 30px
-    padding: 5px 0 5px 40px
+    padding: 5px 0
 .sideBarNav
   display: flex
   flex-direction: column
@@ -42,12 +41,13 @@ li
 .middle
   flex-grow: 1
 .autoTags
-  height: calc(100vh - 300px)
+  height: calc(100vh - 231px)
   overflow: auto
 </style>
 <template lang="pug">
   .sideBar
-    .sideBarTitle Zex
+    .sideBarTitle
+      router-link(to="/") Zex
     ul.sideBarNav
       li
         .section

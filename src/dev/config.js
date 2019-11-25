@@ -10,6 +10,7 @@ dotenv.config()
 /** ADD HERE YOUR ENV VARIABLES */
 config.ENV = process.env.ENVIRONMENT || 'test'
 config.HTTP_SERVER_PORT = process.env.PORT || 3003
+config.LOGIN_URL = process.env.LOGIN_URL
 /** END OF ENV VARIABLES DEFINITION */
 
 const loggerTypes = {

@@ -1,24 +1,23 @@
 <style lang="sass" scoped>
-  @import '~/shared/_colors.sass'
   .textField
     position: relative
   span
     display: block
-    color: $light-gray
+    color: var(--light-gray)
     font-size: .9rem
     margin-top: 15px
     text-transform: uppercase
   input
     width: 100%
-    border: 1px solid $light-gray
-    color: $devil-gray
+    border: 1px solid var(--light-gray)
+    color: var(--devil-gray)
     border-radius: 6px
     margin: 0
     padding: 8px
     margin: 5px 0
     font-size: 1.5rem
     &:focus
-      border: 1px solid $accent
+      border: 1px solid var(--accent)
   .icon
     position: absolute
     right: 10px
@@ -26,7 +25,7 @@
     width: 20px
     line-height: 20px
     height: 20px
-    color: $dark-gray
+    color: var(--dark-gray)
     text-align: center
     cursor: pointer
     user-select: none

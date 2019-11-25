@@ -1,14 +1,13 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 label
   display: flex
   align-items: center
   justify-content: space-between
   cursor: pointer
+  padding: 0 10px
   &:hover
-    color: $accent
-    .tag
-      background-color: $accent
+    color: var(--pinot-noir)
+    background: transparent linear-gradient(135deg, rgba(#ffffff, 0.5) 0%, rgba(#ffffff, 0.05) 100%)
 .label
   flex-grow: 1
 .selector

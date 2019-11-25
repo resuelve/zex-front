@@ -15,8 +15,8 @@ export default new Vuex.Store({
     addToast (s, toast) {
       s.toasts.push(toast)
     },
-    delToast(s, key) {
-      s.toasts = s.toasts.filter(m => m.key != key)
+    delToast (s, key) {
+      s.toasts = s.toasts.filter(m => m.key !== key)
     }
   }
 })

@@ -1,0 +1,62 @@
+[
+  {
+    "area": "engineering",
+    "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mAQdm9hTZddDUodAzuUOZSdFR6cQSG8VTwHnJJV",
+    "branch_office": "corporativo",
+    "country": "mexico",
+    "email": "carlos.flores@resuelve.mx",
+    "employee_id": "3079",
+    "google_id": "106318744786297100006",
+    "job_title": "Ingeniero de desarrollo Sr",
+    "level": "no_lider",
+    "name": "Carlos Fernando Flores Benavides",
+    "nickname": "Zero",
+    "role": "collaborator",
+    "staff": "administrativo"
+  },
+  {
+    "area": "engineering",
+    "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mAQdm9hTZddDUodAzuUOZSdFR6cQSG8VTwHnJJV",
+    "branch_office": "corporativo",
+    "country": "mexico",
+    "email": "faraujo@resuelve.mx",
+    "employee_id": "3079",
+    "google_id": "106318744786297100006",
+    "job_title": "Ingeniero de desarrollo Sr",
+    "level": "no_lider",
+    "name": "Fernando Araujo",
+    "nickname": "Fernando",
+    "role": "collaborator",
+    "staff": "administrativo"
+  },
+  {
+    "area": "engineering",
+    "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mAQdm9hTZddDUodAzuUOZSdFR6cQSG8VTwHnJJV",
+    "branch_office": "corporativo",
+    "country": "mexico",
+    "email": "beto@resuelve.mx",
+    "employee_id": "3079",
+    "google_id": "106318744786297100006",
+    "job_title": "Ingeniero de desarrollo Sr",
+    "level": "no_lider",
+    "name": "Roberto Sosa",
+    "nickname": "Beto",
+    "role": "collaborator",
+    "staff": "administrativo"
+  },
+  {
+    "area": "engineering",
+    "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mAQdm9hTZddDUodAzuUOZSdFR6cQSG8VTwHnJJV",
+    "branch_office": "corporativo",
+    "country": "mexico",
+    "email": "erick.reyna@resuelve.mx",
+    "employee_id": "3079",
+    "google_id": "106318744786297100006",
+    "job_title": "Ingeniero de desarrollo Sr",
+    "level": "no_lider",
+    "name": "Erick Reyna",
+    "nickname": "Erick",
+    "role": "collaborator",
+    "staff": "administrativo"
+  }
+]

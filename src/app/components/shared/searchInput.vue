@@ -1,15 +1,14 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .searchInput
   display: flex
   align-items: center
-  background-color: $white
+  background-color: var(--white)
   padding: 0
-  color: $light-gray
+  color: var(--light-gray)
   height: 30px
   border-radius: 30px
   overflow: hidden
-  box-shadow: 0px 0px 5px 0px darken($titanium, 4%)
+  box-shadow: 0px 0px 5px 0px var(--titanium)
   position: relative
   &:hover
     input
@@ -26,23 +25,22 @@ input
   border: none
   font-size: 18px
   padding: 0
-  outline: none
   background-color: transparent
-  color: $light-gray
+  color: var(--light-gray)
   transition: width 150ms linear
   &::-webkit-input-placeholder
-    color: rgba($light-gray, .5)
+    color: rgba(var(--light-gray), .5)
   &:not(:placeholder-shown), &:focus
     width: 200px
     padding: 0 0 0 10px
   &:not(:placeholder-shown)
     + .icon
-      background-color: $accent
-      color: $white
+      background-color: var(--accent)
+      color: var(--white)
       cursor: pointer
       &:hover
-        background-color: darken($accent, 5%)
-        color: $white
+        background-color: var(--accent)
+        color: var(--white)
 </style>
 <template lang="pug">
   .searchInput

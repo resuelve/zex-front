@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { routes as mainRoutes } from '~/main'
+import notFound from '~/main/notFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/', redirect: '/dashboard'
-  }
+  { path: '/', redirect: '/dashboard'},
+  { path: '/tickets', redirect: '/dashboard' },
+  { path: '*', component: notFound }
 ]
 const insertRoute = rts => {
   rts.forEach(route => {

@@ -9,7 +9,7 @@ export const isLoggedIn = () => {
 
 export const decode = token => {
   if (!token) return false
-  const data = token.split('.')[0]
+  const [data] = token.split('.')
   const decoded = decodeURIComponent(
     Array.prototype.map
       .call(
