@@ -1,8 +1,7 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .message
-  --color: #{$accent-variant}
-  --variant: #{$accent}
+  --color: var(--accent-variant)
+  --variant: var(--accent)
   background-color: var(--color)
   border: 1px solid var(--variant)
   color: var(--variant)
@@ -10,14 +9,14 @@
   margin: 6px 0
   border-radius: 3px
   &.error
-    --color: #{$error-variant}
-    --variant: #{$error}
+    --color: var(--error-variant)
+    --variant: var(--error)
   &.success
-    --color: #{$success-variant}
-    --variant: #{$success}
+    --color: var(--success-variant)
+    --variant: var(--success)
   &.warning
-    --color: #{$warning-variant}
-    --variant: #{$warning}
+    --color: var(--warning-variant)
+    --variant: var(--warning)
 </style>
 <template lang="pug">
   .message

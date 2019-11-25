@@ -1,5 +1,4 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .login-button
   border-radius: 2px
   text-align: center
@@ -9,7 +8,7 @@
   height: 2.7rem
   line-height: 2.7rem
   user-select: none
-  +colors
+  // +colors
 </style>
 
 <template lang="pug">

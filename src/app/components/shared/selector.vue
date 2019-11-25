@@ -1,5 +1,4 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .selector
   font-size: 16px
   label
@@ -7,7 +6,7 @@
     align-items: center
     height: 30px
   &.selected
-    color: $accent
+    color: var(--accent)
 input
   display: none
 </style>

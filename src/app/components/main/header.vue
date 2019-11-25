@@ -1,5 +1,4 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .appHeader
   display: flex
   justify-content: space-between
@@ -15,7 +14,7 @@
 .selected
   font-weight: 400
   font-size: 12px
-  color: $accent
+  color: var(--accent)
 </style>
 <template lang="pug">
   .appHeader

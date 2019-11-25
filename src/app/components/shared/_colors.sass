@@ -1,33 +1,9 @@
-$white: #FAFAFA
-$titanium: #f0f0f0
-$light-gray: #78909C
-$lighter-gray: #999999
-$lighter-gray-bg: #aaaaaa
-$insulting-gray: #EEEEEE
-$devil-gray: #455A64
-$dark-gray: #263238
-
-$accent: #01579B
-$accent-variant: #B3E5FC
-
-$success: #1B5E20
-$success-variant: #C8E6C9
-$error: #b71c1c
-$error-variant: #ffcdd2
-$warning: #F57F17
-$warning-variant: #FFF9C4
-
-$buttonColors: ()
-$buttonColors: map-merge($buttonColors, (primary: $accent))
-$buttonColors: map-merge($buttonColors, (success: $success))
-$buttonColors: map-merge($buttonColors, (warning: $warning))
-$buttonColors: map-merge($buttonColors, (error: $error))
-
 =color($type)
-  background-color: map-get($buttonColors, $type)
-  color: $white
+  background: var(--#{$type}) linear-gradient(135deg, rgba(#fff, 0.1) 0%, rgba(#000, 0.2) 100%)
+  color: var(--white)
+  box-shadow: 5px 5px 10px -5px var(--pinot-noir)
   &:hover
-    background-color: darken(map-get($buttonColors, $type), 5%)
+    background: var(--#{$type}) linear-gradient(135deg, rgba(#fff, 0.01) 0%, rgba(#000, 0.2) 100%)
 
 =colors
   @each $type in primary success warning error

@@ -1,39 +1,47 @@
 <style lang="sass" scoped>
-@import '~/shared/_colors.sass'
 .ticket
-  background-color: $white
+  background: transparent linear-gradient(135deg, rgba(#ffffff, 0.1) 0%, rgba(#ffffff, 0.05) 100%)
+  box-shadow: 5px 5px 10px -5px var(--pinot-noir)
+  border-radius: 6px
   justify-content: space-between
   padding: 15px 20px
-  &:not(:last-child)
-    border-bottom: 1px solid $lighter-gray-bg
-  &, .title, .assigned, .comments, .menu
+  color: var(--white)
+  margin-bottom: 15px
+  width: 100%
+  transition: 500ms all
+  &:hover
+    width: calc(100% + 40px)
+    margin-left: -20px
+  &, .title, .author, .comments, .menu
     display: flex
     align-items: center
-  .title
-    flex-grow: 1
-  .assigned
+  .author
     min-width: 180px
     max-width: 180px
     padding: 0 10px
-    .avatar
-      width: 30px
-      height: 30px
-      border-radius: 50%
-      object-fit: cover
     .name
       padding: 0 10px
       width: 100%
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
-  .title
+  .middle
     max-width: calc(100% - 360px)
+    flex-grow: 1
+  .tags
+    display: flex
+    padding-top: 5px
+    align-items: center
+    .tag
+      margin-right: 4px
+  .title
     .comments
       min-width: 20px
       height: 20px
       justify-content: center
-      background-color: $insulting-gray
-      border: 1px solid $lighter-gray-bg
+      background-color: var(--insulting-gray)
+      border: 1px solid var(--lighter-gray-bg)
+      color: var(--pinot-noir)
       font-size: 10px
       margin-right: 10px
       border-radius: 2px
@@ -42,14 +50,14 @@
         position: absolute
         content: ''
         border: 5px solid transparent
-        border-left: 5px solid $lighter-gray-bg
+        border-left: 5px solid var(--lighter-gray-bg)
         left: 19px
       &:after
         left: 18px
-        border-left: 5px solid $insulting-gray
+        border-left: 5px solid var(--insulting-gray)
     .name
       font-weight: 700
-      color: $devil-gray
+      color: var(--white)
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
@@ -61,24 +69,32 @@
     min-width: 50px
     height: 30px
     justify-content: flex-end
-    color: $lighter-gray-bg
+    color: var(--lighter-gray-bg)
 </style>
 <template lang="pug">
 .ticket
-  selector
-  .assigned
-    img.avatar(:src="userData.avatar")
+  //- selector
+  .author
+    userPicture.big(:src="userData.avatar")
     .name {{userData.nickname}}
-  .title
-    .comments +9
-    .name: router-link(to="/tickets/abc-123")
-      |Hipster ipsum asimet ultraform organic coffe herbal tea
+  .middle
+    .title
+      .comments +9
+      .name: router-link(to="/tickets/abc-123")
+        |Hipster ipsum asimet ultraform organic coffe herbal tea
+    .tags
+      tag Vanex
+      tag Berex
+      tag Kor
+      userPicture.small(:src="userData.avatar")
   .timeStamp 09:41 AM
   .menu
     .icon: i.icon-dots
 </template>
 <script>
 import selector from '~/shared/selector.vue'
+import userPicture from '~/shared/userPicture.vue'
+import tag from '~/shared/tag.vue'
 export default {
   data: () => ({
     selected: false
@@ -89,7 +105,9 @@ export default {
     }
   },
   components: {
-    selector
+    selector,
+    tag,
+    userPicture
   }
 }
 </script>
