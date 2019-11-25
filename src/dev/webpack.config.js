@@ -1,3 +1,4 @@
+/* global config */
 import VueLoaderPlugin from 'vue-loader/lib/plugin'
 import webpack from 'webpack'
 import path from 'path'
@@ -22,7 +23,8 @@ export default {
       vue: 'vue/dist/vue.js',
       Utils: path.resolve(__dirname, '../app/assets/scripts/'),
       Styles: path.resolve(__dirname, '../app/assets/styles/'),
-      '~': path.resolve(__dirname, '../app/components/')
+      '~': path.resolve(__dirname, '../app/components/'),
+      mocks: path.resolve(__dirname, '../app/mocks/')
     }
   },
   optimization: {
@@ -53,7 +55,7 @@ export default {
             options: {
               sassOptions: {
                 indentedSyntax: true
-              },
+              }
             }
           }
         ]

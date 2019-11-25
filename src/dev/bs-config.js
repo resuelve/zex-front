@@ -1,5 +1,4 @@
 const dotenv = require('dotenv')
-const { join } = require('path')
 dotenv.config()
 
 const port = process.env.PORT || 3003

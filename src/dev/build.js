@@ -1,4 +1,4 @@
-/* globals config */
+/* globals config logger */
 import webpack from 'webpack'
 import { promisify } from 'util'
 import mkdirp from 'mkdirp'
