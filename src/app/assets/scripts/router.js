@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { routes as mainRoutes } from '~/main'
+import { routes as settingsRoutes } from '~/settings'
 import notFound from '~/main/notFound.vue'
 
 Vue.use(VueRouter)
@@ -16,7 +17,10 @@ const insertRoute = rts => {
   })
 }
 
-insertRoute(mainRoutes)
+insertRoute([].concat(
+  mainRoutes,
+  settingsRoutes
+))
 
 const router = new VueRouter({
   mode: 'history',

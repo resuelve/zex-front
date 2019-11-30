@@ -6,9 +6,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userData: null,
-    toasts: []
+    toasts: [],
+    insideTicket: false,
+    isEditing: false
   },
   mutations: {
+    setFlags (s, flags) {
+      Object.keys(flags).forEach(flag => {
+        s[flag] = flags[flag]
+      })
+    },
     setUser (s, input) {
       s.userData = input
     },

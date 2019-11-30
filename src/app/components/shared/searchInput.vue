@@ -2,13 +2,14 @@
 .searchInput
   display: flex
   align-items: center
-  background-color: var(--white)
+  background: var(--blueberry) linear-gradient(135deg, rgba(#ffffff, 0.1) 0%, rgba(#ffffff, 0.05) 100%)
   padding: 0
-  color: var(--light-gray)
+  color: var(--white)
   height: 30px
+  border: none
   border-radius: 30px
   overflow: hidden
-  box-shadow: 0px 0px 5px 0px var(--titanium)
+  box-shadow: 5px 5px 10px -5px var(--pinot-noir)
   position: relative
   &:hover
     input
@@ -19,27 +20,26 @@
   height: 30px
   line-height: 30px
   text-align: center
-  border-radius: 50%
 input
   width: 0
   border: none
   font-size: 18px
   padding: 0
   background-color: transparent
-  color: var(--light-gray)
+  color: var(--white)
   transition: width 150ms linear
   &::-webkit-input-placeholder
-    color: rgba(var(--light-gray), .5)
+    color: var(--light-gray)
   &:not(:placeholder-shown), &:focus
     width: 200px
     padding: 0 0 0 10px
   &:not(:placeholder-shown)
     + .icon
-      background-color: var(--accent)
+      background-color: var(--blueberry)
       color: var(--white)
       cursor: pointer
       &:hover
-        background-color: var(--accent)
+        background-color: var(--pinot-noir)
         color: var(--white)
 </style>
 <template lang="pug">

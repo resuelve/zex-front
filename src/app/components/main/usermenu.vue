@@ -21,6 +21,7 @@
   border-radius: 6px
   overflow: hidden
   box-shadow: 5px 5px 10px -5px var(--pinot-noir)
+  z-index: 1000
   li a, li .item
     font-size: 18px
     line-height: 18px
@@ -30,6 +31,8 @@
   li a
     &:hover
       background-color: var(--pinot-noir)
+    i
+      margin-right: 10px
 
 </style>
 <template lang="pug">
@@ -38,6 +41,10 @@
     ul.dropMenu
       li
         .item {{userData.nickname}}
+      li
+        router-link(to="/settings")
+          i.icon-cog
+          |Opciones
       li
         router-link(to="/logout")
           i.icon-exit

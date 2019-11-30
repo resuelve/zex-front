@@ -1,14 +1,17 @@
 <style lang="sass" scoped>
+@import '~/shared/_colors.sass'
 .login-button
-  border-radius: 2px
+  border-radius: 6px
   text-align: center
   cursor: default
-  margin: 20px 0 10px 0
-  font-size: 1.3rem
-  height: 2.7rem
-  line-height: 2.7rem
+  padding: 5px 10px
   user-select: none
-  // +colors
+  font-size: 0.8em
+  &.small
+    font-size: 0.6em
+  &.big
+    font-size: 1em
+  +colors
 </style>
 
 <template lang="pug">

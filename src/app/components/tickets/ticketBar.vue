@@ -33,16 +33,20 @@ li
     height: 30px
 .searcher
   padding-left: 40px
+  margin-bottom: 10px
 .sideBarNav
   display: flex
   flex-direction: column
   justify-content: space-between
   flex-grow: 1
 .middle
+  display: flex
+  flex-direction: column
   flex-grow: 1
 .autoTags
-  height: calc(100vh - 191px)
+  max-height: calc(100vh - 201px)
   overflow: auto
+  flex-grow: 1
 .coworker
   display: flex
   justify-content: space-between
