@@ -1,3 +1,11 @@
+import Auth from '@resuelve/auth'
+const auth = new Auth()
+
+export const decode = token => {
+  if (!token) return false
+  return auth.parseToken(token)
+}
+
 export const logout = () => {
   delete window.localStorage.token
   delete window.sessionStorage.token
@@ -5,20 +13,6 @@ export const logout = () => {
 
 export const isLoggedIn = () => {
   return window.localStorage.token || window.sessionStorage.token
-}
-
-export const decode = token => {
-  if (!token) return false
-  const [data] = token.split('.')
-  const decoded = decodeURIComponent(
-    Array.prototype.map
-      .call(
-        window.atob(data.replace(/_/g, '/').replace(/-/g, '+')),
-        c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-      )
-      .join('')
-  )
-  return JSON.parse(decoded)
 }
 
 export const login = (token, permanent) => {

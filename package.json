@@ -9,11 +9,16 @@
     "browserSync": "browser-sync start --config src/dev/bs-config.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:resuelve/zex-front.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/register": "^7.6.2",
+    "@resuelve/auth": "^1.1.0",
     "axios": "^0.19.0",
     "browser-sync": "^2.26.7",
     "consolecolors": "^0.33.2-b",
