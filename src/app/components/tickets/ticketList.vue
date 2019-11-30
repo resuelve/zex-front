@@ -1,6 +1,7 @@
 <style lang="sass" scoped>
 .tickets
   display: flex
+  height: 100%
   .content
     flex-grow: 1
     padding: 20px 40px
@@ -29,6 +30,9 @@ export default {
     sidebar,
     ticket,
     appHeader
+  },
+  mounted () {
+    this.$store.commit('setFlags', { insideTicket: false })
   }
 }
 </script>

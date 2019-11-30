@@ -1,15 +1,21 @@
 <style lang="sass" scoped>
 img
-  width: 30px
-  height: 30px
+  min-width: 30px
+  min-height: 30px
+  max-width: 30px
+  max-height: 30px
   border-radius: 50%
   object-fit: cover
   &.small
-    width: 15px
-    height: 15px
+    min-width: 15px
+    min-height: 15px
+    max-width: 15px
+    max-height: 15px
   &.big
-    width: 45px
-    height: 45px
+    min-width: 45px
+    min-height: 45px
+    max-width: 45px
+    max-height: 45px
 </style>
 <template lang="pug">
   img(

@@ -9,9 +9,19 @@
   margin-bottom: 15px
   width: 100%
   transition: 500ms all
+  overflow: hidden
+  position: relative
   &:hover
     width: calc(100% + 40px)
     margin-left: -20px
+    &:before
+      content: ''
+      position: absolute
+      width: 5px
+      height: 100%
+      background-color: var(--primary)
+      top: 0
+      left: 0
   &, .title, .author, .comments, .menu
     display: flex
     align-items: center

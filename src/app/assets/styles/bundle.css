@@ -8,6 +8,7 @@
 html, body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: var(--white)
 }
 
 body {
@@ -21,17 +22,33 @@ body {
   --dark-gray: #263238;
   --blueberry: #3B4770;
   --pinot-noir: #1B1E31;
-  --accent: #4A53BC;
+  --accent: #5667C7;
   --primary: var(--accent);
   --success: #69A460;
   --error: #FC507F;
   --warning: #F57F17;
-
   background: var(--pinot-noir) linear-gradient(135deg, var(--blueberry) 0%, var(--pinot-noir) 100%);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: transparent;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background: var(--pinot-noir);
 }
 
 * {
   box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: var(--pinot-noir) transparent;
 }
 
 a { 

@@ -46,6 +46,11 @@ export default {
     selectOption (user) {
       this.$emit('coworkerSelected', user)
       this.searchValue = ''
+    },
+    clean () {
+      setTimeout(() => {
+        this.searchValue = ''
+      }, 100)
     }
   },
   computed: {
@@ -67,7 +72,11 @@ export default {
 
 <template lang="pug">
   .searchCoworker
-    input(v-model="searchValue", placeholder="Buscar colaborador")
+    input(
+      v-model="searchValue"
+      placeholder="Buscar colaborador"
+      @blur="clean"
+    )
     ul.optionBox
       li(
         v-for="user in users"

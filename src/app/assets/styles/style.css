@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'zex';
-  src:  url('fonts/zex.eot?9yrvf0');
-  src:  url('fonts/zex.eot?9yrvf0#iefix') format('embedded-opentype'),
-    url('fonts/zex.ttf?9yrvf0') format('truetype'),
-    url('fonts/zex.woff?9yrvf0') format('woff'),
-    url('fonts/zex.svg?9yrvf0#zex') format('svg');
+  src:  url('fonts/zex.eot?76i4v3');
+  src:  url('fonts/zex.eot?76i4v3#iefix') format('embedded-opentype'),
+    url('fonts/zex.ttf?76i4v3') format('truetype'),
+    url('fonts/zex.woff?76i4v3') format('woff'),
+    url('fonts/zex.svg?76i4v3#zex') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pencil:before {
+  content: "\e906";
+}
 .icon-plus:before {
   content: "\ea0a";
 }

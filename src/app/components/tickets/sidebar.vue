@@ -39,10 +39,13 @@ li
   justify-content: space-between
   flex-grow: 1
 .middle
+  display: flex
+  flex-direction: column
   flex-grow: 1
 .autoTags
-  height: calc(100vh - 231px)
+  max-height: calc(100vh - 231px)
   overflow: auto
+  flex-grow: 1
 </style>
 <template lang="pug">
   .sideBar
@@ -68,10 +71,7 @@ li
           li: itemSelector(items="1") Berex
           li: itemSelector(items="1") Kor
           li: itemSelector() Vanex
-      //- li
-        .section
-          .icon: i.icon-cog
-          |Ajustes
+
 </template>
 <script>
 import itemSelector from '~/shared/itemSelector.vue'
